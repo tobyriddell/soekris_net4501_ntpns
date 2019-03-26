@@ -5,15 +5,29 @@ This document describes the setup of a VirtualBox virtual machine which is used 
 1. Download and install Oracle VirtualBox
 1. Download the FreeBSD 11.1 ISO FreeBSD-11.1-RELEASE-i386-disc1.iso from http://ftp.freebsd.org/pub/FreeBSD/releases/ISO-IMAGES/11.1/ or a mirror
 1. Create a new virtual machine with type 'BSD', version 'FreeBSD (32-bit)' and 2GB RAM, 16GB hard drive
-1. Change the settings to give the virtual machine 4 CPUs (this will speed  up compilation steps)
+1. If you have sufficient CPU power on the computer where the VM will run, change the settings to give the virtual machine 4 CPUs (this will speed  up compilation steps)
 1. Attach the FreeBSD ISO that you downloaded as the CD-ROM device
-1. Start the virtual machine, hit F12 to choose boot device and select CD-ROM
-1. Choose default install options unless you have to modify them (you may have to modify keymap, for example)
+1. Start the virtual machine, hit F12 to choose boot device and select CD-ROM, choose 'Boot Multi User' (this is the default option, you can just wait)
+1. Choose default install options, except that you don't need to create local users (you may also have to modify keymap)
 1. Finish installation (set root password), shut down the virtual machine and unmount the CD-ROM device
 1. Boot the virtual machine from its virtual hard drive
 
 ## Setup build environment
 
+1. Logon to the newly-created virtual machine as root
+1. Build and install git:
+```
+make -C /usr/ports/devel/git install clean BATCH=yes
+```
+1. Clone the repo. from github:
+```
+git clone git@gitlab.prevtec.com:toby/soekris_net4501_ntpns.git
+```
+1. Change to the soekris_net4501_ntpns directory and run the setup script:
+```
+cd soekris_net4501_ntpns
+./vm_setup.sh
+```
 
 
 
