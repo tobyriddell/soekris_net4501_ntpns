@@ -19,6 +19,7 @@ This document describes the setup of a VirtualBox virtual machine which is used 
 ```
 make -C /usr/ports/devel/git install clean BATCH=yes
 ```
+(this will take a while to run as there are a number of dependencies that also need to be built)
 1. Clone the repo. from github:
 ```
 git clone git@gitlab.prevtec.com:toby/soekris_net4501_ntpns.git
@@ -28,6 +29,6 @@ git clone git@gitlab.prevtec.com:toby/soekris_net4501_ntpns.git
 cd soekris_net4501_ntpns
 ./vm_setup.sh
 ```
-
+(this takes around 5-10 minutes to run and the script has 'set -e' so it will quit on any errors)
 
 
