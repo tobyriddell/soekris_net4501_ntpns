@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -e
+
 make -C /usr/ports/devel/subversion install clean BATCH=yes
 make -C /usr/ports/sysutils/screen install clean BATCH=yes
 make -C /usr/ports/devel/configkit install clean BATCH=yes
