@@ -12,7 +12,7 @@ This document describes the setup of a VirtualBox virtual machine which is used 
 8. Finish installation (set root password), shut down the virtual machine and unmount the CD-ROM device
 9. Boot the virtual machine from its virtual hard drive
 
-### Setup build environment
+## Setup build environment
 
 
 
