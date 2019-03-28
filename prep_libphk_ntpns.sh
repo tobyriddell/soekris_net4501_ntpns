@@ -8,11 +8,11 @@ tar -zxf NTPns.20080902.tgz
 tar -zxf Libphk.20080902.tgz
 
 # Apply patches to address security warnings and disable SNMP
-patch < dcf77.c.diff
-patch < log.c.diff
-patch < main.c.diff
-patch < main_Makefile.diff
-patch < Makefile.diff
-patch < partner.c.diff
-patch < source.c.diff
+patch < patches/dcf77.c.diff
+patch < patches/log.c.diff
+patch < patches/main.c.diff
+patch < patches/main_Makefile.diff
+patch < patches/Makefile.diff
+patch < patches/partner.c.diff
+patch < patches/source.c.diff
 
