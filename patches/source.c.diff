@@ -1,0 +1,11 @@
+--- NTPns/main/source.c.orig	2018-12-12 05:37:30.719011016 -0500
++++ NTPns/main/source.c	2018-12-11 15:11:25.000000000 -0500
+@@ -207,7 +207,7 @@
+ {
+ 	struct timespec t1, t2;
+ 	struct source *sp, *sp2;
+-	double a;
++	double a = 0.0;
+ 	int i, j;
+ 
+ 	/* Make sure the source timer runs at 100msec before each UTC sec */

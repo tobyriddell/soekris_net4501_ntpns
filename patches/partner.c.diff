@@ -1,0 +1,11 @@
+--- NTPns/ntpv4/partner.c.orig	2018-12-12 05:37:54.266234937 -0500
++++ NTPns/ntpv4/partner.c	2018-12-11 14:59:07.000000000 -0500
+@@ -307,7 +307,7 @@
+ 			    hbuf, sizeof(hbuf), NULL, 0, NI_NUMERICHOST);
+ 			if (i != 0)
+ 				err(1, "could not get numeric hostname");
+-			p->sid = SourceAdd(hbuf);
++			p->sid = SourceAdd("%s", hbuf);
+ 			SourceParam(p->sid, SRC_UPDATE_RATE, cf->poll);
+ 			SourceParam(p->sid, SRC_LOS_TIMEOUT, 3 * cf->poll);
+ 		}

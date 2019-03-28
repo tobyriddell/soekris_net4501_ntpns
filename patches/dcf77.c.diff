@@ -1,0 +1,13 @@
+--- NTPns/dcf77/dcf77.c.orig	2005-09-27 15:20:01.000000000 -0400
++++ NTPns/dcf77/dcf77.c	2018-12-11 15:41:21.142437000 -0500
+@@ -329,7 +329,9 @@
+ 	p = getenv("TZ");
+ 	if (p == NULL || strcmp(p, "Europe/Berlin")) {
+ 		Log(Linfo, "setting TZ for dcf77");
+-		putenv("TZ=Europe/Berlin");
++		char tz[32];
++		strcpy(tz, "TZ=Europe/Berlin");
++		putenv(tz);
+ 		tzset();
+ 	}
+ 
