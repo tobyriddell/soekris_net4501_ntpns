@@ -6,7 +6,7 @@ else
   NANO_CONF_DIR=$(cd $(dirname $2); pwd -P)
 fi
 
-NANO_NAME=NET4501_RVD_1.0
+NANO_NAME=net4501_ntpns_1.0
 NANO_SRC=/usr/src
 NANO_KERNEL=$NANO_CONF_DIR/NET4501_kernel.conf
 NANO_CFGDIR=$NANO_CONF_DIR/etc_cfg
