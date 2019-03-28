@@ -7,8 +7,12 @@ ftp http://phk.freebsd.dk/NTPns/phkrel/Libphk.20080902.tgz
 tar -zxf NTPns.20080902.tgz
 tar -zxf Libphk.20080902.tgz
 
-# Compile libphk
-export DESTDIR=/usr/obj/nanobsd.net4501_ntpns_1.0
-(cd Libphk && make && make install)
+# Apply patches to address security warnings and disable SNMP
+patch < dcf77.c.diff
+patch < log.c.diff
+patch < main.c.diff
+patch < main_Makefile.diff
+patch < Makefile.diff
+patch < partner.c.diff
+patch < source.c.diff
 
-# Apply patches
