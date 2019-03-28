@@ -27,8 +27,26 @@ git clone git@gitlab.prevtec.com:toby/soekris_net4501_ntpns.git
 1. Change to the soekris_net4501_ntpns directory and run the setup script:
 ```
 cd soekris_net4501_ntpns
-./vm_setup.sh
+sh ./vm_setup.sh
 ```
 (this takes around 5-10 minutes to run and the script has 'set -e' so it will quit on any errors)
+
+## Prepare source for libphk and ntpns
+
+1. Download source code, apply patches
+```
+sh ./prep_libphk_ntpns.sh
+```
+
+## Build nanobsd
+
+1. Build nanobsd with the following command (takes 8-10 mins)
+```
+sh /usr/src/tools/tools/nanobsd/nanobsd.sh -c nanobsd/cfg/timelord.nano
+```
+The log files for building nanobsd are in /usr/obj/nanobsd.net4501_ntpns_1.0
+
+
+
 
 
