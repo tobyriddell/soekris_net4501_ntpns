@@ -112,14 +112,14 @@ cust_install_libphk() {
 	mkdir -p ${NANO_WORLDDIR}/usr/local/lib
 	mkdir -p ${NANO_WORLDDIR}/usr/local/include
 	mkdir -p ${NANO_WORLDDIR}/usr/local/man/man3
-	DESTDIR=${NANO_WORLDDIR} make -C /root/Libphk install
+	DESTDIR=${NANO_WORLDDIR} make -C /root/soekris_net4501_ntpns/Libphk install
 }
 
 cust_install_ntpns() {
 	mkdir -p ${NANO_WORLDDIR}/usr/lib
 	mkdir -p ${NANO_WORLDDIR}/usr/lib/debug/usr/lib
 	mkdir -p ${NANO_WORLDDIR}/usr/lib/debug/sbin
-	DESTDIR=${NANO_WORLDDIR} make -C /root/NTPns install
+	DESTDIR=${NANO_WORLDDIR} make -C /root/soekris_net4501_ntpns/NTPns install
 }
 
 cust_setup_tmpfs() {
