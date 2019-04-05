@@ -33,14 +33,14 @@ sh ./vm_setup.sh
 
 ## Prepare source for libphk and ntpns
 
-1. Download source code, apply patches
+1. Download source code, apply patches (still in soekris_net4501_ntpns directory)
 ```
 sh ./prep_libphk_ntpns.sh
 ```
 
 ## Build nanobsd
 
-1. Build nanobsd with the following command (takes 8-10 mins)
+1. Build nanobsd with the following command (still in soekris_net4501_ntpns directory) (takes 8-10 mins)
 ```
 sh /usr/src/tools/tools/nanobsd/nanobsd.sh -c nanobsd/cfg/timelord.nano
 ```
