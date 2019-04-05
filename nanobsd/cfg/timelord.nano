@@ -153,7 +153,7 @@ cust_ppsapitest() {
 cust_install_packages() {
 	mkdir -p ${NANO_WORLDDIR}/packages
 	pkg create minicom; cp minicom-*.txz ${NANO_WORLDDIR}/packages
-	pkg create perl5.24; cp perl*.txz ${NANO_WORLDDIR}/packages
+	pkg create perl5; cp perl*.txz ${NANO_WORLDDIR}/packages
 	pkg create gettext-runtime; cp gettext-runtime-*.txz ${NANO_WORLDDIR}/packages
 	pkg create indexinfo; cp indexinfo-*.txz ${NANO_WORLDDIR}/packages
 	pkg create lrzsz; cp lrzsz-*.txz ${NANO_WORLDDIR}/packages
