@@ -11,3 +11,4 @@ patch < patches/SConstruct.diff
 # Build gpsctl
 cd gpsd-3.18.1
 scons minimal=Yes gpsd=True gpsdclients=True oncore=True qt=False python=False
+scons install
