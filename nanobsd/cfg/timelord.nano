@@ -159,12 +159,11 @@ cust_install_packages() {
 	pkg create lrzsz; cp lrzsz-*.txz ${NANO_WORLDDIR}/packages
 	pkg create screen; cp screen-*.txz ${NANO_WORLDDIR}/packages
 	#pkg create gpsd; cp gpsd-*.txz ${NANO_WORLDDIR}/packages
-	cp /usr/local/bin/gpsctl ${NANO_WORLDDIR}/usr/local/bin
+	mkdir ${NANO_WORLDDIR}/usr/local/bin
+	cp /usr/local/bin/gpsctl ${NANO_WORLDDIR}/usr/local/bin/gpsctl
 	cp $(which pkg-static) ${NANO_WORLDDIR}/
 	chroot ${NANO_WORLDDIR} sh -c 'cd packages; IGNORE_OSVERSION=yes /pkg-static add *; cd ..;'
 	rm -rf ${NANO_WORLDDIR}/packages ${NANO_WORLDDIR}/pkg-static
-	# Make symlinks
-	ln -s /usr/local/bin/perl5.24.1 ${NANO_WORLDDIR}/usr/local/bin/perl5
 }
 
 customize_cmd cust_allow_ssh_root
