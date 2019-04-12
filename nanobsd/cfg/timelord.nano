@@ -158,7 +158,8 @@ cust_install_packages() {
 	pkg create indexinfo; cp indexinfo-*.txz ${NANO_WORLDDIR}/packages
 	pkg create lrzsz; cp lrzsz-*.txz ${NANO_WORLDDIR}/packages
 	pkg create screen; cp screen-*.txz ${NANO_WORLDDIR}/packages
-	pkg create gpsd; cp gpsd-*.txz ${NANO_WORLDDIR}/packages
+	#pkg create gpsd; cp gpsd-*.txz ${NANO_WORLDDIR}/packages
+	cp /usr/local/bin/gpsctl ${NANO_WORLDDIR}/usr/local/bin
 	cp $(which pkg-static) ${NANO_WORLDDIR}/
 	chroot ${NANO_WORLDDIR} sh -c 'cd packages; IGNORE_OSVERSION=yes /pkg-static add *; cd ..;'
 	rm -rf ${NANO_WORLDDIR}/packages ${NANO_WORLDDIR}/pkg-static
