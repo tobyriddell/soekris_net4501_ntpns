@@ -119,6 +119,7 @@ cust_install_ntpns() {
 	mkdir -p ${NANO_WORLDDIR}/usr/lib
 	mkdir -p ${NANO_WORLDDIR}/usr/lib/debug/usr/lib
 	mkdir -p ${NANO_WORLDDIR}/usr/lib/debug/sbin
+	DESTDIR=${NANO_WORLDDIR} make -C /root/soekris_net4501_ntpns/NTPns
 	DESTDIR=${NANO_WORLDDIR} make -C /root/soekris_net4501_ntpns/NTPns install
 }
 
