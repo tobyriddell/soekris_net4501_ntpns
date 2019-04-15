@@ -8,7 +8,7 @@ This document describes the setup of a VirtualBox virtual machine which is used 
 1. If you have sufficient CPU power on the computer where the VM will run, change the settings to give the virtual machine 4 CPUs (this will speed  up compilation steps)
 1. Attach the FreeBSD ISO that you downloaded as the CD-ROM device
 1. Start the virtual machine, hit F12 to choose boot device and select CD-ROM, choose 'Boot Multi User' (this is the default option, you can just wait)
-1. Choose default install options, except that you don't need to create local users (you may also have to modify keymap)
+1. Choose default install options. You will need to set up networking so that you can download from the Internet, and you may also have to modify keymap. You won't need to create local users.
 1. Finish installation (set root password), shut down the virtual machine and unmount the CD-ROM device
 1. Boot the virtual machine from its virtual hard drive
 
