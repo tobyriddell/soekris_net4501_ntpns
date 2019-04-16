@@ -112,6 +112,7 @@ cust_install_libphk() {
 	mkdir -p ${NANO_WORLDDIR}/usr/local/lib
 	mkdir -p ${NANO_WORLDDIR}/usr/local/include
 	mkdir -p ${NANO_WORLDDIR}/usr/local/man/man3
+	DESTDIR=${NANO_WORLDDIR} make -C /root/soekris_net4501_ntpns/Libphk
 	DESTDIR=${NANO_WORLDDIR} make -C /root/soekris_net4501_ntpns/Libphk install
 }
 
