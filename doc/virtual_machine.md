@@ -38,6 +38,13 @@ sh ./vm_setup.sh
 sh ./prep_libphk_ntpns.sh
 ```
 
+## Build gpsd (for gpsctl)
+
+1. Download source code, apply patch, build gpsd (still in soekris_net4501_ntpns directory)
+```
+sh ./prep_gpsd.sh
+```
+
 ## Build nanobsd
 
 1. Build nanobsd with the following command (still in soekris_net4501_ntpns directory) (takes 8-10 mins)
