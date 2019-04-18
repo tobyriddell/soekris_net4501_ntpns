@@ -8,11 +8,7 @@ make -C /usr/ports/sysutils/screen install clean BATCH=yes
 make -C /usr/ports/devel/configkit install clean BATCH=yes
 make -C /usr/ports/lang/tcl84 install clean BATCH=yes
 make -C /usr/ports/ftp/wget install clean BATCH=yes
-<<<<<<< HEAD
 #make -C /usr/ports/shells/bash install clean BATCH=yes
-=======
-make -C /usr/ports/shells/bash install clean BATCH=yes
->>>>>>> cdb09725841d3bb24c25f2d66ee9a4285c1b4d07
 #make -C /usr/ports/lang/perl5.24 install clean BATCH=yes
 make -C /usr/ports/comms/minicom install clean BATCH=yes
 make -C /usr/ports/astro/gpsd install clean BATCH=yes
