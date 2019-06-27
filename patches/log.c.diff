@@ -1,0 +1,11 @@
+--- NTPns/main/log.c.orig	2018-12-12 05:36:52.381646358 -0500
++++ NTPns/main/log.c	2018-12-11 15:08:03.000000000 -0500
+@@ -122,7 +122,7 @@
+ 	if (!(lh->flags & LF_ENABLE))
+ 		return;
+ 	if (lh->flags & LF_SYSLOG)
+-		syslog(lh->flags & LOG_PRIMASK, s);
++		syslog(lh->flags & LOG_PRIMASK, "%s", s);
+ 	if (lh->flags & LF_STDOUT) {
+ 		fprintf(stdout, "%s", s);
+ 		fflush(stdout);

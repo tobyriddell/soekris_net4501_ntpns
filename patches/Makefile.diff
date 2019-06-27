@@ -1,0 +1,11 @@
+--- NTPns/Makefile.orig	2007-05-08 04:59:42.000000000 -0400
++++ NTPns/Makefile	2018-12-11 15:46:07.653106000 -0500
+@@ -12,7 +12,7 @@
+ SUBDIR	+=	ntpv4
+ # SUBDIR	+=	quorum
+ SUBDIR	+=	main
+-SUBDIR	+=	ntp_mib
++#SUBDIR	+=	ntp_mib
+ 
+ NB	=	${.CURDIR}/NanoBSD
+ 
