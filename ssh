@@ -1,0 +1,1 @@
+ssh -i ~/.ssh/id_rsa-github-tobyriddell -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no $*

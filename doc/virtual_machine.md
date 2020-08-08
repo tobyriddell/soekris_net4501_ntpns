@@ -22,7 +22,7 @@ make -C /usr/ports/devel/git install clean BATCH=yes
 (this will take a while to run as there are a number of dependencies that also need to be built)
 1. Clone the repo. from github:
 ```
-git clone git@gitlab.prevtec.com:toby/soekris_net4501_ntpns.git
+git clone git@github.com:tobyriddell/soekris_net4501_ntpns.git
 ```
 1. Change to the soekris_net4501_ntpns directory and run the setup script:
 ```
